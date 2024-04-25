@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Webcam</title>
+<link rel="stylesheet" href="">
+
+
+</head>
+<body>
+    <video id="eins" autoplay="true"></video>
+    <video id="zwei" autoplay="true"></video>
+<script>
+navigator.mediaDevices.getUserMedia({ video: true }).then(stream => setStream(stream));
+
+
+function setStream(stream) {
+document.querySelector('video').srcObject=stream;
+}
+
+</script>
+</body>
+</html>
+
+
+
